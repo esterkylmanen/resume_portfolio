@@ -2,5 +2,5 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 
 
-def resume_portfolio(request):
-    return render(request, "resume_portfolio.html")
+def resume(request):
+    return render(request, "resume.html")
