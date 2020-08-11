@@ -1,7 +1,63 @@
-h1 {
-    color: blueviolet;
+html,
+body,
+main {
+    height: 100%;
+    margin: 0em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    flex: 0 0 auto;
+    background-color: pink;
+    font-size: 2em;
+    padding: 0.5em;
 }
 
 .self {
+    height: 3em;
     border-radius: 50%;
 }
+
+.flex-container {
+    flex: 1 1 auto;
+    display: flex;
+    position: relative;
+    overflow-y: auto;
+}
+
+
+/* body {
+    display: flex;
+    margin: 0px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0em;
+}
+
+.self {
+    height: 3em;
+    border-radius: 50%;
+}
+
+header {
+    flex: 0 0 auto;
+    display: inline-flex;
+    width: 100%;
+    background-color: pink;
+    font-size: 2em;
+    padding: 0.5em;
+}
+
+.flex-container {
+    display: flex;
+    align-self: end;
+    flex-wrap: wrap;
+    align-items: center;
+} */
