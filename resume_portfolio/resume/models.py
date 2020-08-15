@@ -17,6 +17,10 @@ class Contact(models.Model):
         self.linkedin = self.linkedin.lower()
         return super(Contact, self).save(*args, **kwargs)
     
+    def __str__(self):
+        name = self.first_name + " " + self.last_name
+        return name
+    
 
 class Skill(models.Model):
     class Scale(models.IntegerChoices):
@@ -30,19 +34,28 @@ class Skill(models.Model):
     title = models.CharField(max_length=50)
     scale = models.IntegerField(choices=Scale.choices)
     
+    def __str__(self):
+        return self.title
+    
 
 class Experience(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=60)
     employer = models.CharField(max_length=50)
     start_date = models.DateField(auto_now=False, auto_now_add=False)
     end_date = models.DateField(auto_now=False, auto_now_add=False)
     description = models.CharField(max_length=100)
     
+    def __str__(self):
+        return self.title
+    
     
 class Education(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=60)
     school = models.CharField(max_length=50)
     start_date = models.DateField(auto_now=False, auto_now_add=False)
     end_date = models.DateField(auto_now=False, auto_now_add=False)
     description = models.CharField(max_length=100)
+    
+    def __str__(self):
+        return self.title
     
