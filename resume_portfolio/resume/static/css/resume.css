@@ -25,39 +25,32 @@ header {
 .flex-container {
     flex: 1 1 auto;
     display: flex;
+    flex-direction: column;
     position: relative;
     overflow-y: auto;
 }
 
-
-/* body {
+.topnav {
     display: flex;
-    margin: 0px;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    margin-top: 0em;
-}
-
-.self {
-    height: 3em;
-    border-radius: 50%;
-}
-
-header {
-    flex: 0 0 auto;
-    display: inline-flex;
-    width: 100%;
-    background-color: pink;
-    font-size: 2em;
-    padding: 0.5em;
-}
-
-.flex-container {
-    display: flex;
-    align-self: end;
-    flex-wrap: wrap;
     align-items: center;
-} */
+    justify-content: center;
+}
+
+.topnav a {
+    display: flex;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 0.6em;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
