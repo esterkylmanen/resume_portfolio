@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="flex-container">
+    <ul>
+        {% for edu in educations %}
+        <li>{{ edu.title }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
