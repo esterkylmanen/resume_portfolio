@@ -1,0 +1,9 @@
+<div class="topnav">
+        {% for title,link in links.items %}
+        {% if link in request.path %}
+            <a class="active" href="{{link}}">{{title}}</a>
+        {% else %}
+            <a href="{{link}}">{{title}}</a>
+        {%endif%}
+    {% endfor %}
+</div>
