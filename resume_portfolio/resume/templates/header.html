@@ -1,0 +1,10 @@
+{% load static %}
+{% load header_links %}
+
+<header>
+    <h1>
+        {% for contact in contacts %} {{ contact.first_name }} {{ contact.last_name}} {% endfor %}
+    </h1>
+    <img class="self" src="{% static 'images/ester.jpg' %}">
+    {% navigation %}
+</header>
